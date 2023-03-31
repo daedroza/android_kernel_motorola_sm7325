@@ -163,12 +163,18 @@
 	qcom,init-voltage = <3000000>;
 };
 
+&mdss_dsi_phy0 {
+	qcom,panel-allow-phy-poweroff;
+};
+
 &mdss_mdp {
 	connectors = <&sde_wb &sde_dsi &sde_rscc>;
 };
 
 &mot_csot_nt37701_655_1080x2400_dsc_cmd_v0 {
 	qcom,esd-check-enabled;
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "te_chk_reg_rd";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -308,6 +314,8 @@
 
 &mot_csot_nt37701_655_1080x2400_dsc_cmd_v1 {
 	qcom,esd-check-enabled;
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "te_chk_reg_rd";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -448,6 +456,8 @@
 
 &mot_tm_nt37701_655_1080x2400_dsc_cmd_v0 {
 	qcom,esd-check-enabled;
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "te_chk_reg_rd";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -586,6 +596,8 @@
 
 &mot_tm_nt37701_655_1080x2400_dsc_cmd_v1 {
 	qcom,esd-check-enabled;
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "te_chk_reg_rd";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
@@ -725,6 +737,8 @@
 
 &mot_tm_nt37701_655_1080x2400_dsc_cmd_v2 {
 	qcom,esd-check-enabled;
+	qcom,ulps-enabled;
+	qcom,suspend-ulps-enabled;
 	qcom,mdss-dsi-panel-status-check-mode = "te_chk_reg_rd";
 	qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
 	qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
